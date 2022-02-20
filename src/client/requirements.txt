@@ -1,0 +1,4 @@
+argparse
+paho-mqtt
+requests
+watchdog
