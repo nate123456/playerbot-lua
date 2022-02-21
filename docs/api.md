@@ -795,13 +795,13 @@ The following are members of `Aura`. For example:
     print("duration: " .. some_aura.duration)
 ```
 
-| Name         | Description               | Return Type | Tested? |
-| ------------ | ------------------------- | ----------- | ------- |
-| stacks       | aura's stack count        | `number`    | No      |
-| duration     | aura's remaining duration | `number`    | No      |
-| max_duration | aura's maximum duration   | `number`    | No      |
-| charges      | aura's charge count       | `number`    | No      |
-| caster       | the caster of the aura    | `Unit`      | No      |
+| Name         | Description                            | Return Type | Tested? |
+| ------------ | -------------------------------------- | ----------- | ------- |
+| stacks       | aura's stack count                     | `number`    | No      |
+| duration     | aura's remaining time, -1 if not found | `number`    | No      |
+| max_duration | aura's maximum duration                | `number`    | No      |
+| charges      | aura's charge count                    | `number`    | No      |
+| caster       | the caster of the aura                 | `Unit`      | No      |
 
 ## Item
 
@@ -836,4 +836,4 @@ some_item:use()
 | Function | Description                                                                                       | Parameters                                                        | Return Type | Tested? |
 | -------- | ------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- | ----------- | ------- |
 | use      | use an item on either the given slot, target, or game object. will use self if no target provided | `number` _slot_ (0 - 18) or `Item` _target_ `GameObject` _target_ | none        | Yes     |
-| destory  | destroy an item.                                                                                  | none                                                              | none        | Yes     |
+| destroy  | destroy an item.                                                                                  | none                                                              | none        | Yes     |
