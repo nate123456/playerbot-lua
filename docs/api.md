@@ -270,23 +270,23 @@ The `equip_slot` enum allows for mapping from a equip slot name to its correspon
 
 | Key       | Value |
 | --------- | ----- |
-| Head      | 0     |
-| Neck      | 1     |
-| Shoulders | 2     |
-| Chest     | 3     |
-| Waist     | 5     |
-| Legs      | 6     |
-| Feet      | 7     |
-| Wrists    | 8     |
-| Hands     | 9     |
-| Finger1   | 10    |
-| Finger2   | 11    |
-| Trinket1  | 12    |
-| Trinket2  | 13    |
-| Back      | 14    |
-| Main Hand | 15    |
-| Off Hand  | 16    |
-| Ranged    | 17    |
+| head      | 0     |
+| neck      | 1     |
+| shoulders | 2     |
+| chest     | 3     |
+| waist     | 5     |
+| legs      | 6     |
+| feet      | 7     |
+| wrists    | 8     |
+| hands     | 9     |
+| finger_1  | 10    |
+| finger_2  | 11    |
+| trinket_1 | 12    |
+| trinket_2 | 13    |
+| back      | 14    |
+| main_hand | 15    |
+| off_hand  | 16    |
+| ranged    | 17    |
 
 ### Spell Result
 
