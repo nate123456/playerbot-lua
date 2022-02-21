@@ -836,3 +836,4 @@ some_item:use()
 | Function | Description                                                                                       | Parameters                                                        | Return Type | Tested? |
 | -------- | ------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- | ----------- | ------- |
 | use      | use an item on either the given slot, target, or game object. will use self if no target provided | `number` _slot_ (0 - 18) or `Item` _target_ `GameObject` _target_ | none        | Yes     |
+| destory  | destroy an item.                                                                                  | none                                                              | none        | Yes     |
