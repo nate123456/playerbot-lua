@@ -467,7 +467,7 @@ The `spell_result` enum allows for mapping from a spell result id to a readable 
 | 254 | SPELL_NOT_FOUND                             |
 | 255 | SPELL_CAST_OK                               |
 
-# Types
+## Types
 
 This section outlines each type and its members and functions. All members for all types are read-only and are accessed through the dot or period accessor, i.e. `bot.name`. All functions for all types are accessed through the colon accessor, i.e. `bot:stand()`.
 
@@ -560,6 +560,7 @@ print("Raid Icon: " .. some_unit.in_combat)
 | power               | current power (mana, energy, etc.)                               | `number`                       | Yes     |
 | max_power           | max power (mana, energy, etc.)                                   | `number`                       | Yes     |
 | current_cast        | the spell the unit is casting (0 if not found)                   | `number`                       | No      |
+| current_cast_time   | the remaining time on the currently casting spell                | `number`                       | No      |
 | current_auto_attack | the auto attack spell the unit is casting (0 if not found)       | `number`                       | No      |
 | current_channel     | the channel spell the unit is casting (0 if not found)           | `number`                       | No      |
 
@@ -812,12 +813,13 @@ This type represents an item. It inherits all functionality from `Object`. All m
 The following are members of `Item`. For example:
 
 ```lua
-    print("item stack count: " .. some_item.stack_count)
+    print("item stack count: " .. some_item.total_count)
 ```
 
 | Name            | Description                                                                                    | Return Type | Tested? |
 | --------------- | ---------------------------------------------------------------------------------------------- | ----------- | ------- |
-| stack_count     | the item's stack count                                                                         | `number`    | No      |
+| total_count     | how many of this type of item are in the owner's inventory                                     | `number`    | No      |
+| charges         | how many charges remain on the item                                                            | `number`    | No      |
 | is_potion       | whether or not the item is a potion                                                            | `bool`      | No      |
 | max_stack_count | the item's highest stack count before it makes another stack                                   | `number`    | No      |
 | id              | the item's generic Id (not the id of the instance of the item)                                 | `number`    | No      |
