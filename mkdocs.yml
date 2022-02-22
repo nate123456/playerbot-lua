@@ -2,13 +2,36 @@ site_name: MaNGOS Playerbot Lua Scripting Documentation
 site_url: https://example.com/
 
 nav:
-    - Home: index.md
-    - API Reference: api.md
+  - Home: index.md
+  - API: 
+    - api/index.md
+    - Global:
+      - api/global/index.md
+      - wow: api/global/wow.md
+      - store: api/global/store.md
+    - Types:
+      - Player: api/types/player.md
+      - Unit: api/types/unit.md
+      - Item: api/types/item.md
+      - Aura: api/types/aura.md
+      - Creature: api/types/creature.md
+      - Pet: api/types/pet.md
+      - Object: api/types/object.md
+      - Game Object: api/types/game_object.md
+      - World Object: api/types/world_object.md
+      - Position: api/types/position.md
+    - Enums:
+      - Classes: api/enums/classes.md
+      - Equip Slot: api/enums/equip_slot.md
+      - Specializations: api/enums/specs.md
+      - Spell Results: api/enums/spell_results.md
 
 theme:
   name: material
   palette:
     scheme: slate
+  features:
+    - navigation.indexes
 
 markdown_extensions:
   - tables

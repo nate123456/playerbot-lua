@@ -29,7 +29,7 @@ end
 
 Clients should download the playerbot CLI program from the latest [release](https://github.com/nate123456/mangos-lua/releases) and install it as appropriate. It is recommended to install `playerbot.exe` to a general location, such as a folder in program files if on Windows, then add the folder to the path environment variable so the CLI program is available anywhere.
 
-Open a blank folder in your lua editor of choice (VS Code is a good choice) and run `playerbot`. It will initialize your lua directory for you. Configure your environment using the provided `config.json` file. Use `playerbot --help` for a list of arguments and commands. Begin scripting using the [API reference](api.md).
+Open a blank folder in your lua editor of choice (VS Code is a good choice) and run `playerbot`. It will initialize your lua directory for you. Configure your environment using the provided `config.json` file. Use `playerbot --help` for a list of arguments and commands. Begin scripting using the [API reference](api/index.md).
 
 ### Server
 
