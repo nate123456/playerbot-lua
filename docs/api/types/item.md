@@ -29,7 +29,8 @@ The following are callable functions on any `Item`.
 some_item:use()
 ```
 
-| Function | Description                                                                                       | Parameters                                                        | Return Type | Tested? |
-| -------- | ------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- | ----------- | ------- |
-| use      | use an item on either the given slot, target, or game object. will use self if no target provided | `number` _slot_ (0 - 18) or `Item` _target_ `GameObject` _target_ | none        | Yes     |
-| destroy  | destroy an item.                                                                                  | none                                                              | none        | Yes     |
+| Function  | Description                                                                                       | Parameters                                                        | Return Type | Tested? |
+| --------- | ------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- | ----------- | ------- |
+| use       | use an item on either the given slot, target, or game object. Will use self if no target provided. Will not use if currently casting. | `number` _slot_ (0 - 18) or `Item` _target_ `GameObject` _target_ | none        | Yes     |
+| force_use | use an item on either the given slot, target, or game object. Will use self if no target provided. Will attempt to use even if currently casting. | `number` _slot_ (0 - 18) or `Item` _target_ `GameObject` _target_ | none        | Yes     |
+| destroy   | destroy an item.                                                                                  | none                                                              | none        | Yes     |
