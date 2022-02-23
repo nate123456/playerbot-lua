@@ -40,3 +40,4 @@ markdown_extensions:
   - pymdownx.superfences
 
 repo_url: https://github.com/nate123456/mangos-lua/
+repo_name: nate123456/mangos-lua
