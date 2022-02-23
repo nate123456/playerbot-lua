@@ -1,0 +1,26 @@
+name: client-ci 
+on:
+  push:
+    branches:
+      - master
+      - main
+
+jobs:
+  deploy:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: ['windows-latest']
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-python@v2
+      with:
+        python-version: 3.x
+
+    - run: pip install -r src/client/requirements.txt pyinstaller
+    - run: pyinstaller --onefile src/client/playerbot.py
+    - uses: actions/upload-artifact@v2
+      with:
+        path: dist/playerbot.exe
