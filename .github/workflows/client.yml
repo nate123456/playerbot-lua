@@ -25,5 +25,5 @@ jobs:
     - uses: softprops/action-gh-release@v1
       with:
         body_path: src/client/CHANGELOG.md
-        files: playerbot.exe
+        files: dist/playerbot.exe
           
