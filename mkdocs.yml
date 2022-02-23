@@ -38,3 +38,5 @@ markdown_extensions:
   - pymdownx.highlight:
       use_pygments: true
   - pymdownx.superfences
+
+repo_url: https://github.com/nate123456/mangos-lua/
