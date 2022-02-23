@@ -35,3 +35,6 @@ theme:
 
 markdown_extensions:
   - tables
+  - pymdownx.highlight:
+      use_pygments: true
+  - pymdownx.superfences

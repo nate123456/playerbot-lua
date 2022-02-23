@@ -1,10 +1,8 @@
 # Welcome
 
-This website serves as the documentation for World of Warcraft playerbot scripting API available as part of the MaNGOS Core WoW Server applications.
+This website serves as the documentation for the World of Warcraft playerbot scripting API available as part of the MaNGOS Core WoW Server applications.
 
-The scripting API exposes Lua bindings and a per-client Lua virtual machine that can be used to control all aspects of group member behavior, thereby allowing each client to script and control their own bots to their exact specifications. All information and actions accessible to the scripts are chosen to mimic real player information and choices and are restricted so as to not enable lua scripts to exploit their proximity to the server to perform actions than a normal client could not perform- the lua bindings are not simply 1-to-1 mappings of all server game methods and functions.
-
-The lua API completely replaces the current AI when enabled. When disabled, the original Playerbot AI resumes control. Toggling usage of lua scripts for each player may be performed using the commands `.bot ai use lua` or `.bot ai use legacy`.
+The scripting API exposes Lua bindings to a per-client Lua environment that may be used to control all aspects of group member combat behavior. All information and actions accessible to the scripts are designed to mimic real player information and choices and are restricted so as to not enable lua scripts to exploit their proximity to the server to perform actions that a normal client could not perform.
 
 The latest version of the API is currently maintained in a fork of `mangos-tbc` located [here](https://github.com/nate123456/mangos-tbc). This fork aims to stay current with the latest stable upstream when builds succeed.
 
@@ -27,9 +25,13 @@ end
 
 ### Client
 
-Clients should download the playerbot CLI program from the latest [release](https://github.com/nate123456/mangos-lua/releases) and install it as appropriate. It is recommended to install `playerbot.exe` to a general location, such as a folder in program files if on Windows, then add the folder to the path environment variable so the CLI program is available anywhere.
+Clients should download the playerbot CLI program from the latest [release](https://github.com/nate123456/mangos-lua/releases) and install it in a global location such as a folder in `C:\Program Files` if on Windows, then add the folder to the path environment variable so the CLI program is available anywhere.
 
-Open a blank folder in your lua editor of choice (VS Code is a good choice) and run `playerbot`. It will initialize your lua directory for you. Configure your environment using the provided `config.json` file. Use `playerbot --help` for a list of arguments and commands. Begin scripting using the [API reference](api/index.md).
+Open a blank folder in a lua editor of choice (VS Code is a good choice) and run `playerbot`. It will initialize the lua directory. The environment may be configured using the provided `config.json` file. The command `playerbot --help` lists available arguments and commands.
+
+Begin scripting using the [API reference](api/index.md).
+
+When in-game, summon bots as normal using `.bot add <name>`. Use the commands `.bot ai use lua` or `.bot ai use legacy` to allow the client to switch between usage of their bots scripts or the legacy AI. When the lua AI is enabled, the legacy AI will not perform any combat actions, but will still respond to certain events as the per the legacy AI, such as an invite or trade request. 
 
 ### Server
 
