@@ -2,3 +2,4 @@ argparse
 paho-mqtt
 requests
 watchdog
+pyyaml

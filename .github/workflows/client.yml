@@ -1,9 +1,8 @@
 name: client-ci 
 on:
   push:
-    branches:
-      - master
-      - main
+    tags:
+      - "v*.*.*"
 
 jobs:
   deploy:
@@ -14,6 +13,7 @@ jobs:
         os: ['windows-latest']
 
     steps:
+
     - uses: actions/checkout@v2
     - uses: actions/setup-python@v2
       with:
@@ -21,6 +21,9 @@ jobs:
 
     - run: pip install -r src/client/requirements.txt pyinstaller
     - run: pyinstaller --onefile src/client/playerbot.py
-    - uses: actions/upload-artifact@v2
+
+    - uses: softprops/action-gh-release@v1
       with:
-        path: dist/playerbot.exe
+        body_path: src/client/CHANGELOG.md
+        files: playerbot.exe
+          

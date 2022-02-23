@@ -1,9 +1,10 @@
 import os, json
 from pathlib import Path
+import yaml
 
-config_init = {
+default_config = {
     "TOKEN": "ABC123",
-    "API_HOST": "http://localhost:5092/",
+    "API_HOST": "http://localhost:5000/",
     "LOG_HOST": "http://localhost:1883/",
     "SRC_DIR": "src/",
     "WATCHER_DEPLOY_THROTTLE_MS": 100,
@@ -12,19 +13,22 @@ config_init = {
 
 def get_config():
     cwd = Path(os.getcwd())
-    config_path = cwd / "config.json"
+    config_path = cwd / "config.yml"
     config = None
 
     if os.path.exists(config_path):
         with open(config_path) as f:
-            contents = f.read()
-            config = json.loads(contents)
+            try:
+                config=yaml.safe_load(f)
+                print(config)
+            except yaml.YAMLError as exc:
+                print(exc)
 
     if not config:
         print("No configuration detected, creating initial config file. Please configure as appropriate.")
 
-        with open(config_path, "w") as f:
-            f.write(json.dumps(config_init, indent=4))
+        with open(config_path, "w") as yaml_file:
+            yaml.dump(default_config, yaml_file, default_flow_style=False)
 
         return
 
