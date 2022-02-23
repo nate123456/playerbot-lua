@@ -21,9 +21,10 @@ jobs:
 
     - run: pip install -r src/client/requirements.txt pyinstaller
     - run: pyinstaller --onefile src/client/playerbot.py
+    - run: tar.exe -a -c -f dist/playerbot.zip dist/playerbot.exe
 
     - uses: softprops/action-gh-release@v1
       with:
         body_path: src/client/CHANGELOG.md
-        files: dist/playerbot.exe
+        files: dist/playerbot.zip
           
