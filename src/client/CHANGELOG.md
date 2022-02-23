@@ -28,8 +28,6 @@ Initial alpha release for Windows.
   - checks for authenticated token before subscribing
   - outputs logs in real time
 
-___ 
-
 ## Instructions for installing the CLI to a global location (Windows):
 
 1. In a global location, such as `C:\Program Files\`, create a folder called `Playerbot CLI`. 
