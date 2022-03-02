@@ -25,7 +25,7 @@ nav:
       - Equip Slot: api/enums/equip_slot.md
       - Specializations: api/enums/specs.md
       - Spell Results: api/enums/spell_results.md
-      - Creature Types: api/enums/dispel_types.md
+      - Dispel Types: api/enums/dispel_types.md
       - Creature Types: api/enums/spell_results.md
       - Raid Icons: api/enums/spell_results.md
 

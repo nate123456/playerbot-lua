@@ -2,26 +2,29 @@
 
 ## Getting started
 
-If you have not already, check out the [getting started](getting_started_client) page to learn how to setup your script development environment.
+If you have not already, check out the [getting started](/docs/getting_started_client) page to learn how to setup your script development environment.
 
 ## Lua script requirements
 
 Each script AI should create an entrypoint script that defines a function `main`. The main function will be called every 50ms or so depending on server performance (referred to as a 'tick'). The function should read in game state data and perform actions as appropriate. The main function should return when processing is complete.
 
-Since actions are non-blocking, it is possible to perform multiple actions per bot depending on the action (i.e. actions that don't affect GCD, like taking a pot or printing information). The following code snippet demonstrates printing several messages which display in-game as system messages:
+Even though most actions block (i.e. directly execute), it is possible to perform multiple actions per bot depending on the action (i.e. actions that don't affect GCD, like taking a pot or printing information). The following code snippet demonstrates having each bot activate both their trinkets in the same tick:
 
 ```lua
-local has_printed = false
+local has_used_trinkets = false
 
 local function main()
-    if not has_printed then
+    if not has_used_trinkets then
         for bot in each(wow.bots) do
-            print(bot.name)
+            bot.trinket_1:use()
+            bot.trinket_2:use()
         end
-        has_printed = true
+        has_used_trinkets = true
     end
 end
 ```
+
+It should be noted that the result of actions is not guaranteed to be present in the game state data after an action is performed. It is therefore recommended to check for proper results in the next tick when appropriate. The only exception to this is when an action returns a result, for example [cast](types/player.md).
 
 ## Libraries
 
@@ -54,7 +57,7 @@ json.decode('[1,2,3,{"x":10}]') -- Returns { 1, 2, 3, { x = 10 } }
 
 ### Custom Modules
 
-WoW lua scripting supports custom modules that work in the same way they would with normal lua files using their relative path to the source root. Modules are importable through the same usage of `require`. Given the following files:
+`mangos-lua` supports custom modules that work in the same way they would with normal lua files using their relative path to the source root. Modules are importable through the same usage of `require`. Given the following files:
 
 **modules/test.lua**
 
