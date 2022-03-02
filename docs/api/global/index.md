@@ -29,4 +29,21 @@ print(str(wow.time())) -- time in ticks
 | print    | will generate a system message on the client that owns the environment        | `string` _message_ | none        | Yes     |
 | log      | will send a log message to the log stream output (not necessarily the system) | `string` _message_ | none        | Yes     |
 | str      | casts a lua object to a string (alias of `tostring`)                          | `object` _obj_     | `string`    | Yes     |
-| num      | casts a lua object to a number (alias of `tonumber`)                          |
+| num      | casts a lua object to a number (alias of `tonumber`)                          | `object` _obj_     | `number`    | Yes     |
+| each     | returns a stateful iterator that can be used when the index is not desired    | `array` _arr_      | `iterator`  | Yes     |
+
+`each` is offered to cleanup a common code smell where iteration through an array of elements is desired but the index of the current element is not desired. In vanilla lua, the following code would be used:
+
+```lua
+for _, item in ipairs(items) do
+    print(item)
+end
+```
+
+With `each`, the same code would read:
+
+```lua
+for item in each(items) do
+    print(item)
+end
+```

@@ -1,6 +1,14 @@
 # Equip Slot
 
-The `equip_slot` enum allows for mapping from a equip slot name to its corresponding. The key is a `string` _name_ and the value is a `number` _id_. It is accessed through `wow.enums.equip_slots`.
+The `equip_slots` enum allows for mapping from a equip slot id to its corresponding name. The key is a `string` _name_ and the value is a `number` _id_. It is accessed through `wow.enums.equip_slots`.
+
+It is recommended to use `equip_slots` alongside the `type` member of the [Aura](api/types/aura.md) type. For example:
+
+```lua
+print(wow.enums.equip_slots.1 ) -- magic
+print(wow.enums.equip_slots.magic ) -- 1
+print(wow.enums.equip_slots[aura.type] ) -- magic
+```
 
 | Key       | Value |
 | --------- | ----- |

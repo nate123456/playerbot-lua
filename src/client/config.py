@@ -20,7 +20,6 @@ def get_config():
         with open(config_path) as f:
             try:
                 config=yaml.safe_load(f)
-                print(config)
             except yaml.YAMLError as exc:
                 print(exc)
 

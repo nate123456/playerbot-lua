@@ -1,9 +1,11 @@
 # Specs
 
-The `specs` enum allows for mapping from a class spec id to a readable string. The key is a `number` _id_ and the value is a `string` _name_. It is accessed through `wow.enums.specs`. For example:
+The `specs` enum allows for mapping from a equip slot id to its corresponding name. The key is a `number` _id_ and the value is a `string` _name_. It is accessed through `wow.enums.specs`. For example:
+
+It is recommended to use `specs` alongside the `spec` member of the [Player](api/types/player.md) type. For example:
 
 ```lua
-print(wow.enums.specs.81 ) -- arcane
+print(wow.enums.specs.mage.81 ) -- arcane
 print(wow.enums.specs.arcane ) -- 81
 print(wow.enums.specs[bot.spec] ) -- arcane
 ```

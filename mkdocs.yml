@@ -1,5 +1,5 @@
 site_name: MaNGOS Playerbot Lua Scripting Documentation
-site_url: https://example.com/
+site_url: https://nate123456.github.io/mangos-lua/
 
 nav:
   - Home: index.md
@@ -25,6 +25,10 @@ nav:
       - Equip Slot: api/enums/equip_slot.md
       - Specializations: api/enums/specs.md
       - Spell Results: api/enums/spell_results.md
+      - Creature Types: api/enums/dispel_types.md
+      - Creature Types: api/enums/spell_results.md
+      - Raid Icons: api/enums/spell_results.md
+
 
 theme:
   name: material

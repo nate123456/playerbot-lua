@@ -10,12 +10,13 @@ The following are members of `Object`. All members are read-only. For example:
 print("Object is player: " .. some_object.is_player)
 ```
 
-| Name           | Description                                 | Return Type | Tested?      |
-| -------------- | ------------------------------------------- | ----------- | ------------ |
-| is_player      | whether or not the object is a `Player`     | `bool`      | Yes          |
-| is_creature    | whether or not the object is a `Creature`   | `bool`      | Yes          |
-| is_game_object | whether or not the object is a `GameObject` | `bool`      | Hard to test |
-| is_unit        | whether or not the object is a `Unit`       | `bool`      | Yes          |
+| Name           | Description                                 | Return Type | Tested? |
+| -------------- | ------------------------------------------- | ----------- | ------- |
+| id             | the object's id                             | `number`    | Yes     |
+| is_player      | whether or not the object is a `Player`     | `bool`      | Yes     |
+| is_creature    | whether or not the object is a `Creature`   | `bool`      | Yes     |
+| is_game_object | whether or not the object is a `GameObject` | `bool`      | No      |
+| is_unit        | whether or not the object is a `Unit`       | `bool`      | Yes     |
 
 ## Functions
 
@@ -32,4 +33,4 @@ print("Last Message: " .. some_object:as_player().last_message)
 | as_game_object | casts the object to a `GameObject` | none       | `GameObject` | No      |
 | as_unit        | casts the object to a `Unit`       | none       | `Unit`       | No      |
 
-Note- these functions are required to be able to access the corresponding members and functions for that object type.
+Note- these functions are required to be able to access the corresponding members and functions for that object type. They should only need to be called if a member or function returns this direct type- most often a derived type is returned and these casts are not necessary.

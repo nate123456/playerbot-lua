@@ -2,13 +2,16 @@
 
 ## Functions
 
-These are functions available anywhere. All members are read-only. Usage example:
+These are functions available anywhere on the `store` table, accessible anywhere. Usage example:
 
 ```lua
-print(wow.store.get()) -- { "some_key": "some_value" }
+json = require("json")
+local json_str = wow.store.get()  -- { "some_key": "some_value" }
+data = json.decode(json_str)
+print(data.some_key)
 ```
 
-The store allow for unstructured data to be saved between lua script sessions, i.g. getting and setting json strings.
+The store allow for unstructured data to be saved between lua script sessions, e.g. getting and setting json strings.
 
 | Function | Description                      | Parameters       | Return Type | Tested? |
 | -------- | -------------------------------- | ---------------- | ----------- | ------- |

@@ -22,7 +22,6 @@ print("Pet owner: " .. pet_owner.name)
 The following are callable functions on any `Pet`.
 
 ```lua
--- :(
 some_pet:summon()
 ```
 

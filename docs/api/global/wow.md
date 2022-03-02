@@ -4,7 +4,7 @@ Most state data is accessible through the readonly `wow` table.
 
 ## Members
 
-These members are available anywhere. For example:
+All members are read-only. Usage example:
 
 ```lua
 print(wow.master.name)
@@ -22,7 +22,7 @@ print(wow.master.name)
 
 ## Functions
 
-These are functions available anywhere. All members are read-only. Usage example:
+All functions are read-only. Usage example:
 
 ```lua
 print(str(wow.time())) -- time in ticks

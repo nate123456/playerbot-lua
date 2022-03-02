@@ -26,7 +26,7 @@ The following are callable functions on any `Position`. All functions are read-o
 print("Distance: " .. pos_1:get_distance_between(pos_2))
 ```
 
-| Function        | Description                            | Parameters                                       | Return Type | Tested? |
-| --------------- | -------------------------------------- | ------------------------------------------------ | ----------- | ------- |
-| get_distance_to | get the distance between two positions | `Position` _other_                               | `number`    | Yes     |
-| get_angle       | get the angle to a given position      | `Position` _other_ or `number` _x_, `number` _y_ | `number`    | Yes     |
+| Function        | Description                                                      | Parameters                                       | Return Type | Tested? |
+| --------------- | ---------------------------------------------------------------- | ------------------------------------------------ | ----------- | ------- |
+| get_distance_to | get the distance between two positions (returns squard distance) | `Position` _other_                               | `number`    | Yes     |
+| get_angle       | get the angle to a given position                                | `Position` _other_ or `number` _x_, `number` _y_ | `number`    | Yes     |
