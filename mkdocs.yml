@@ -23,13 +23,12 @@ nav:
     - Enums:
       - api/enums/index.md
       - Classes: api/enums/classes.md
+      - Creature Types: api/enums/spell_results.md
+      - Dispel Types: api/enums/dispel_types.md
       - Equip Slot: api/enums/equip_slot.md
+      - Raid Icons: api/enums/spell_results.md
       - Specializations: api/enums/specs.md
       - Spell Results: api/enums/spell_results.md
-      - Dispel Types: api/enums/dispel_types.md
-      - Creature Types: api/enums/spell_results.md
-      - Raid Icons: api/enums/spell_results.md
-
 
 theme:
   name: material
