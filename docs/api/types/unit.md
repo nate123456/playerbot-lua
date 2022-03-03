@@ -38,13 +38,13 @@ The following are functions that can be called on a `Unit`. All functions are re
 print("Bot threat: " .. some_unit:get_threat(some_bot))
 ```
 
-| Function       | Description                                                           | Parameters                                     | Return Type   | Tested? |
-| -------------- | --------------------------------------------------------------------- | ---------------------------------------------- | ------------- | ------- |
-| is_attacked_by | whether or not the given unit is attacking the unit                   | `Unit` _target_                                | `bool`        | No      |
-| get_threat     | get the threat the given target has on the unit                       | `Unit` _target_                                | `number`      | No      |
-| in_melee_range | get whether or not the given target is reachable with melee           | `Unit` _target_                                | `bool`        | Yes     |
-| is_enemy       | whether or not the unit can attack the given unit                     | `Unit` _target_                                | `bool`        | Yes     |
-| is_friendly    | whether or not the unit can assist (not /assist) the given unit       | `Unit` _target_                                | `bool`        | Yes     |
-| get_aura       | get the first instance of an aura affecting the unit for the given id | `number` _aura_id_, `Unit` _caster_ (optional) | `Aura`        | No      |
-| get_buffs      | get all beneficial auras on the unit                                  | none                                           | `array<Aura>` | No      |
-| get_debuffs    | get all harmful auras on the unit- optional filter by dispel type     | `number` _dispel_type_ (optional)              | `array<Aura>` | No      |
+| Function       | Description                                                                       | Parameters                                     | Return Type   | Tested? |
+| -------------- | --------------------------------------------------------------------------------- | ---------------------------------------------- | ------------- | ------- |
+| is_attacked_by | whether or not the given unit is attacking the unit                               | `Unit` _target_                                | `bool`        | No      |
+| get_threat     | get the threat the given target has on the unit                                   | `Unit` _target_                                | `number`      | No      |
+| in_melee_range | get whether or not the given target is reachable with melee                       | `Unit` _target_                                | `bool`        | Yes     |
+| is_enemy       | whether or not the unit can attack the given unit or group if target not provided | `Unit` _target_ (optional)                     | `bool`        | Yes     |
+| is_friendly    | whether or not the unit can assist (not /assist) the given unit                   | `Unit` _target_                                | `bool`        | Yes     |
+| get_aura       | get the first instance of an aura affecting the unit for the given id             | `number` _aura_id_, `Unit` _caster_ (optional) | `Aura`        | No      |
+| get_buffs      | get all beneficial auras on the unit                                              | none                                           | `array<Aura>` | No      |
+| get_debuffs    | get all harmful auras on the unit- optional filter by dispel type                 | `number` _dispel_type_ (optional)              | `array<Aura>` | No      |
