@@ -24,7 +24,7 @@ local function main()
 end
 ```
 
-It should be noted that the result of actions is not guaranteed to be present in the game state data after an action is performed. It is therefore recommended to check for proper results in the next tick when appropriate. The only exception to this is when an action returns a result, for example [cast](types/player.md).
+It should be noted that the result of actions is not guaranteed to be present in the game state data after an action is performed. It is therefore recommended to check for proper results in the next tick when appropriate. The only exception to this is when an action returns a result.
 
 ## Libraries
 

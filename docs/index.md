@@ -2,9 +2,9 @@
 
 This website serves as the documentation for the World of Warcraft playerbot lua scripting API `mangos-lua` available as part of the MaNGOS Core WoW Server applications.
 
-The scripting API exposes Lua bindings to a per-client Lua environment that may be used to control all aspects of group member combat behavior. All information and actions accessible to the scripts are designed to mimic real player information and choices.
+The scripting API exposes Lua bindings to a per-client Lua environment that may be used to control all aspects of Playerbot combat behavior. All information and actions accessible to the scripts are designed to mimic real player information and choices.
 
-An example of a simple lua script that prints each managed bot's name for the client is below:
+An example of a simple lua script that prints each playerbot's name once for the client is below:
 
 ```lua
 local has_printed = false
