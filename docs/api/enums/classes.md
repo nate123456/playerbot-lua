@@ -2,7 +2,7 @@
 
 The `classes` enum allows for mapping from a class id to its corresponding name. The key is a `number` _id_ and the value is a `string` _name_. It is accessed through `wow.enums.classes`.
 
-It is recommended to use `classes` alongside the `class` member of the [Player](api/types/player.md) type. For example:
+It is recommended to use `classes` alongside the `class` member of the [Player](../types/player.md) type. For example:
 
 ```lua
 print(wow.enums.classes.3 ) -- mage

@@ -2,7 +2,7 @@
 
 The `raid_icons` enum allows for mapping from a raid icon name to its corresponding id. The key is a `string` _name_ and the value is a `number` _id_. It is accessed through `wow.enums.raid_icons`.
 
-It is recommended to use `raid_icons` alongside the `raid_icon` member of the [Unit](api/types/unit.md) type. For example:
+It is recommended to use `raid_icons` alongside the `raid_icon` member of the [Unit](../types/unit.md) type. For example:
 
 ```lua
 print(wow.enums.raid_icon.1 ) -- circle

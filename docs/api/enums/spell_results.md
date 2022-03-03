@@ -2,7 +2,7 @@
 
 The `spell_results` enum allows for mapping from a spell result id to its corresponding name. The key is a `number` _id_ and the value is a `string` _name_. It is accessed through `wow.enums.spell_results`. Due to the significant length of results simplified names have not been provided; the value is a 1-to-1 to the server enum.
 
-It is recommended to use `spell_results` to interpret the result of the `cast` and `force_cast` functions of the [Player](api/types/player.md) type. For example:
+It is recommended to use `spell_results` to interpret the result of the `cast` and `force_cast` functions of the [Player](../types/player.md) type. For example:
 
 ```lua
 print(wow.enums.classes.122 ) -- SPELL_FAILED_TOO_CLOSE

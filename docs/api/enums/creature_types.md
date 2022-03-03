@@ -2,7 +2,7 @@
 
 The `creature_types` enum allows for mapping from a creature type name to its corresponding id. The key is a `string` _name_ and the value is a `number` _id_. It is accessed through `wow.enums.creature_types`.
 
-It is recommended to use `creature_types` alongside the `type` member of the [Unit](api/types/unit.md) type. For example:
+It is recommended to use `creature_types` alongside the `type` member of the [Unit](../types/unit.md) type. For example:
 
 ```lua
 print(wow.enums.classes.1 ) -- beast
