@@ -1,5 +1,5 @@
 site_name: MaNGOS Playerbot Lua Scripting Documentation
-site_url: https://nate123456.github.io/mangos-lua/
+site_url: https://nate123456.github.io/playerbot-lua/
 
 nav:
   - Home: index.md
@@ -43,5 +43,5 @@ markdown_extensions:
       use_pygments: true
   - pymdownx.superfences
 
-repo_url: https://github.com/nate123456/mangos-lua/
-repo_name: nate123456/mangos-lua
+repo_url: https://github.com/nate123456/playerbot-lua/
+repo_name: nate123456/playerbot-lua

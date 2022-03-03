@@ -1,6 +1,6 @@
 # Welcome
 
-This website serves as the documentation for the World of Warcraft playerbot lua scripting API `mangos-lua` available as part of the MaNGOS Core WoW Server applications.
+This website serves as the documentation for the World of Warcraft playerbot lua scripting API `playerbot-lua` available as part of the MaNGOS Core WoW Server applications.
 
 The scripting API exposes Lua bindings to a per-client Lua environment that may be used to control all aspects of Playerbot combat behavior. All information and actions accessible to the scripts are designed to mimic real player information and choices.
 
@@ -23,4 +23,4 @@ end
 
 To get started with Playerbot scripting, check out [getting started for clients](getting_started_client).
 
-To get started migrating a server that has a [core with mangos-lua][cores](cores) integrated or you are interested in setting up a new server, check out [getting started for server admins](getting_started_server).
+To get started migrating a server that has a [core with playerbot-lua][cores](cores) integrated or you are interested in setting up a new server, check out [getting started for server admins](getting_started_server).

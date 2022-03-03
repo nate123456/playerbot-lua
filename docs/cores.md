@@ -1,6 +1,6 @@
 # Cores
 
-Since `mangos-lua` is a 'patch' for existing server applications, it must be integrated into each desired core. The table below describes the status of each core. If a core is not listed and you'd like to see `mangos-lua` integrated into it, feel free to make an [issue](https://github.com/nate123456/mangos-lua/issues).
+Since `playerbot-lua` is a 'patch' for existing server applications, it must be integrated into each desired core. The table below describes the status of each core. If a core is not listed and you'd like to see `playerbot-lua` integrated into it, feel free to make an [issue](https://github.com/nate123456/playerbot-lua/issues).
 
 | Core                                                        | Fork                                             | Description                                        | Status             |
 | ----------------------------------------------------------- | ------------------------------------------------ | -------------------------------------------------- | ------------------ |
@@ -12,4 +12,4 @@ Since `mangos-lua` is a 'patch' for existing server applications, it must be int
 | [mangos-two](https://github.com/mangostwo/server)           | none                                             | MaNGOS Server for Wrath of the Lich King v`3.3.5`  | inactive           |
 | [mangos-three](https://github.com/mangosthree/server)       | none                                             | MaNGOS Server for Cataclysm v`4.3.4`               | inactive           |
 
-`mangos-lua` development continues on the `mangos-tbc`. Once it reaches a stable state a higher priority will be placed on integrating the API in other cores.
+`playerbot-lua` development continues on the `mangos-tbc`. Once it reaches a stable state a higher priority will be placed on integrating the API in other cores.

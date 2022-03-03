@@ -51,4 +51,4 @@ Initial alpha release for Windows.
 18. A system message will appear as instructed in `main.lua` which will read `AI scripting is alive :)`. 
 19. Outside the game, edit the `main.lua` script file to change the printed string to something else, e.g. `AI scripting is alive!`.
 20. In-game, run the command `.bot ai load`. The changed string will appear printed as written.
-21. For more information on what the CLI can do, run the command `playerbot --help` or check the [documentation](https://nate123456.github.io/mangos-lua/).
+21. For more information on what the CLI can do, run the command `playerbot --help` or check the [documentation](https://nate123456.github.io/playerbot-lua/).

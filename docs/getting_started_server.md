@@ -6,4 +6,4 @@ Make sure the server is running the current latest commit on the master branch f
 
 Run the sql setup script located in the source under `sql/base/mangos_lua.sql` e.g. `sudo mysql -uroot --database=tbccharacters < sql/base/mangos_lua.sql` where the database is the characters database for your core.
 
-Bug reports, suggestions, or any other questions should be created as issues [here](https://github.com/nate123456/mangos-lua/issues).
+Bug reports, suggestions, or any other questions should be created as issues [here](https://github.com/nate123456/playerbot-lua/issues).

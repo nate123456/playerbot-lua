@@ -59,7 +59,7 @@ json.decode('[1,2,3,{"x":10}]') -- Returns { 1, 2, 3, { x = 10 } }
 
 ### Custom Modules
 
-`mangos-lua` supports custom modules that work in the same way they would with normal lua files using their relative path to the source root. Modules are importable through the same usage of `require`. Given the following files:
+`playerbot-lua` supports custom modules that work in the same way they would with normal lua files using their relative path to the source root. Modules are importable through the same usage of `require`. Given the following files:
 
 **modules/test.lua**
 
@@ -138,4 +138,4 @@ The lua instance automatically garbage collects using internal best practices to
 
 ## Issues
 
-Bug reports, suggestions, or any other questions should be created as issues [here](https://github.com/nate123456/mangos-lua/issues).
+Bug reports, suggestions, or any other questions should be created as issues [here](https://github.com/nate123456/playerbot-lua/issues).

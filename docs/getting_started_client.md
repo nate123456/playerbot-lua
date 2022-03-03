@@ -1,13 +1,13 @@
 # Getting Started
 
-To setup your `mangos-lua` development environment, follow the installation instructions below.
+To setup your `playerbot-lua` development environment, follow the installation instructions below.
 
 ## Installation instructions (Windows):
 
 The following instructions will guide you through installing the playerbot CLI to a global location (optional) and initializing a script source directory.
 
 1. In a global location, such as `C:\Program Files\`, create a folder called `Playerbot CLI`.
-2. Download the file `playerbot.zip` from the latest [release](https://github.com/nate123456/mangos-lua/releases).
+2. Download the file `playerbot.zip` from the latest [release](https://github.com/nate123456/playerbot-lua/releases).
 3. Right click on the downloaded file and choose `Extract All` from the context menu.
 4. In the destination text box, enter the folder path created in step 1 e.g. `C:\Program Files\Playerbot CLI\` and press `Extract`.
 5. Open the windows start menu, and begin typing `environment variables`. Choose the first result `Edit the system environment variables`. A `System Properties` window will appear.
@@ -27,7 +27,7 @@ The following instructions will guide you through installing the playerbot CLI t
 19. A system message will appear as instructed in `main.lua` which will read `AI scripting is alive :)`.
 20. Outside the game, edit the `main.lua` script file to change the printed string to something else, e.g. `AI scripting is alive!`.
 21. In-game, run the command `.bot ai load`. The changed string will appear printed as written.
-22. For more information on what the CLI can do, run the command `playerbot --help` or check the [documentation](https://nate123456.github.io/mangos-lua/).
+22. For more information on what the CLI can do, run the command `playerbot --help` or check the [documentation](https://nate123456.github.io/playerbot-lua/).
 
 ## Workflow
 
@@ -40,4 +40,4 @@ The following instructions will guide you through installing the playerbot CLI t
 
 Repeat steps 4 through 6 as you develop your scripts. If you get errors on deployment indicating that your token has expired, repeat step 3.
 
-Bug reports, suggestions, or any other questions should be created as issues [here](https://github.com/nate123456/mangos-lua/issues).
+Bug reports, suggestions, or any other questions should be created as issues [here](https://github.com/nate123456/playerbot-lua/issues).
