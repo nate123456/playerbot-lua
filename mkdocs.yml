@@ -21,6 +21,7 @@ nav:
       - World Object: api/types/world_object.md
       - Position: api/types/position.md
     - Enums:
+      - api/enums/index.md
       - Classes: api/enums/classes.md
       - Equip Slot: api/enums/equip_slot.md
       - Specializations: api/enums/specs.md
