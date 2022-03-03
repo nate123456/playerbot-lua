@@ -2,7 +2,9 @@
 
 ## Getting started
 
-If you have not already, check out the [getting started](/docs/getting_started_client) page to learn how to setup your script development environment.
+Check out the [getting started](/docs/getting_started_client) page to learn how to setup a script development environment.
+
+Most interactions with the game state take place through the global access variable `wow`. For more information, check out the [globals](global/index) documentation.
 
 ## Lua script requirements
 
@@ -24,7 +26,7 @@ local function main()
 end
 ```
 
-It should be noted that the result of actions is not guaranteed to be present in the game state data after an action is performed. It is therefore recommended to check for proper results in the next tick when appropriate. The only exception to this is when an action returns a result.
+It should be noted that the results of actions are not guaranteed to be immediately present in the game state data after an action is performed.
 
 ## Libraries
 
@@ -96,7 +98,7 @@ local cc_assignments = {}
 
 local function main()
     for bot in each(wow.bots) do
-        -- notice the usage of a pointer as the key for this table
+        -- notice the usage of a pointer as the key
         if bot.class == wow.enums.classes.mage and not cc_assignments[bot] then
             cc_assignments[bot] = wow.raid_icons.moon
         end
@@ -107,16 +109,16 @@ end
 This strategy for storing CC assignments may seem appealing at first as it provides an easy way to uniquely identify and track assignments. For example, when individual mage behavior is being decided, the following code could be written:
 
 ```lua
--- in some mage decision function
+-- in a mage decision function
 local cc_target = cc_assignments[bot]
 if cc_target then
     bot:cast(cc_target, POLYMORPH_SPELL_ID)
 end
 ```
 
-The issue arises in the next tick, as the previous assignment would still be present with the previous pointer identifying the bot, and when it is checked to see if the bot has an assignment, the bot pointer available will not necessarily match the original pointer, and it will not correctly cast the correct spell.
+The issue arises in the next tick as the previous assignment would still be present with the previous pointer identifying the bot. When `cc_assignments` is indexed to see if the bot has an assignment, the bot pointer available will notmatch the original pointer by value. As such the mage Playerbot will not correctly cast the correct spell.
 
-A better strategy would be to use the name of the bot as the key. Since it is a `string` and therefore a value type, it will represent the bot well between ticks. For example:
+A better strategy might be to use the name of the bot as the key. Since it is a `string` and therefore a value type, it will represent the bot well between ticks. For example:
 
 ```lua
 -- set

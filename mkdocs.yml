@@ -5,10 +5,10 @@ nav:
   - Home: index.md
   - API: 
     - api/index.md
-    - Global:
-      - api/global/index.md
-      - wow: api/global/wow.md
-      - store: api/global/store.md
+    - Globals:
+      - api/globals/index.md
+      - wow: api/globals/wow.md
+      - store: api/globals/store.md
     - Types:
       - Player: api/types/player.md
       - Unit: api/types/unit.md

@@ -21,6 +21,6 @@ end
 
 ## Getting Started
 
-If would like to learn how to get started scripting, check out [getting started for clients](getting_started_client).
+To get started with Playerbot scripting, check out [getting started for clients](getting_started_client).
 
-If would like to learn how to get started with migrating a server that has a [core with mangos-lua][cores](cores) integrated or you are interested in setting up a new server, check out [getting started for server admins](getting_started_server).
+To get started migrating a server that has a [core with mangos-lua][cores](cores) integrated or you are interested in setting up a new server, check out [getting started for server admins](getting_started_server).
