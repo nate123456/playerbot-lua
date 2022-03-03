@@ -33,12 +33,12 @@ end
 
 The list of available enums are below:
 
-| Enum           | Description                                                                |
-| -------------- | -------------------------------------------------------------------------- |
-| classes        | all player classes (paladin, mage, etc.)                                   |
-| creature_types | all creature types (beast, humanoid, etc.)                                 |
-| dispel_types   | all aura dispel types (magic, poison, etc.)                                |
-| equip_slot     | all equipment slots (shoulder, chest, etc.)                                |
-| raid_icons     | all raid icons (skull, cross, etc.)                                        |
-| specs          | all class specializations (arcane mage, fury warrior, etc.)                |
-| spell_results  | all possible results of a spell cast (out of line of sight, success, etc.) |
+| Enum                             | Description                                                                |
+| -------------------------------- | -------------------------------------------------------------------------- |
+| [classes](classes)               | all player classes (paladin, mage, etc.)                                   |
+| [creature_types](creature_types) | all creature types (beast, humanoid, etc.)                                 |
+| [dispel_types](dispel_types)     | all aura dispel types (magic, poison, etc.)                                |
+| [equip_slot](equip_slot)         | all equipment slots (shoulder, chest, etc.)                                |
+| [raid_icons](raid_icons)         | all raid icons (skull, cross, etc.)                                        |
+| [specs](specs)                   | all class specializations (arcane mage, fury warrior, etc.)                |
+| [spell_results](spell_results)   | all possible results of a spell cast (out of line of sight, success, etc.) |
