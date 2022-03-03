@@ -1,10 +1,10 @@
 # Enums
 
-## Intruction
+## Introduction
 
 In lua, enums are tables that represent a map between a number and a string. All enum tables are accessible through `wow.enums`. They are most often used to provide a clean way to represent different possible states which often take the form of a single element of a possible set.
 
-For example, when working with player classes via the `player.class` member (see the [Player](/docs/api/types/player.md) type) the return value is a number which uniquely identifies the class from the set of possible classes. While the numeric value serves well as a clean and straightforward way to represent each class, often times the name of that class is needed. The code snippet below demonstrates the value of having a map available.
+For example, when working with player classes via the `player.class` member (see the [Player](/api/types/player.md) type) the return value is a number which uniquely identifies the class from the set of possible classes. While the numeric value serves well as a clean and straightforward way to represent each class, often times the name of that class is needed. The code snippet below demonstrates the value of having a map available.
 
 ```lua
 print(some_player.class) -- 1: not particularly readable or useful; the reader would have to memorize which class '1' is
