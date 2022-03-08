@@ -14,7 +14,7 @@ print(str(pi)) -- 3.14159265358979323846
 | -------------- | ----------------------------- | ----------- | ------- |
 | pi             | pi to the 20th decimal place  | `number`    | Yes     |
 | [wow](wow)     | state data for the wow server | `table`     | Yes     |
-| [store](store) | store data for the wow server | `table`     | Yes     |
+| [store](store) | store data for the client     | `table`     | Yes     |
 
 ## Functions
 
