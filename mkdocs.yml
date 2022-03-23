@@ -20,6 +20,7 @@ nav:
       - Game Object: api/types/game_object.md
       - World Object: api/types/world_object.md
       - Position: api/types/position.md
+      - Movement Policy: api/types/movement_policy.md
     - Enums:
       - api/enums/index.md
       - Classes: api/enums/classes.md

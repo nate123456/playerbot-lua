@@ -10,18 +10,19 @@ The following are members of `Player`. All members are read-only. For example:
 print("Last message: " .. some_bot.last_message)
 ```
 
-| Name                    | Description                                                               | Return Type   | Tested? |
-| ----------------------- | ------------------------------------------------------------------------- | ------------- | ------- |
-| is_bot                  | whether or not the player is a bot                                        | `bool`        | Yes     |
-| last_message            | the last whisper or party/raid message (only player messages)             | `string`      | Yes     |
-| class                   | the player's class id- [classes](api/enums/classes.md)                    | `number`      | No      |
-| inventory               | all the items in the player's backpack(s)                                 | `array<Item>` | No      |
-| trinket_1               | the player's first trinket                                                | `Item`        | Yes     |
-| trinket_2               | the player's second trinket                                               | `Item`        | Yes     |
-| destination             | the player's destination (if given a chase command)                       | `Position`    | No      |
-| has_reached_destination | whether or not the player has reached its chase destination               | `bool`        | No      |
-| spec                    | The player's deepest tree specialization- see [specs](api/enums/specs.md) | `number`      | No      |
-| party                   | the player's party number (i.e. the number in the raid panel)             | `number`      | No      |
+| Name                    | Description                                                               | Return Type      | Tested? |
+| ----------------------- | ------------------------------------------------------------------------- | ---------------- | ------- |
+| is_bot                  | whether or not the player is a bot                                        | `bool`           | Yes     |
+| last_message            | the last whisper or party/raid message (only player messages)             | `string`         | Yes     |
+| class                   | the player's class id- [classes](api/enums/classes.md)                    | `number`         | No      |
+| inventory               | all the items in the player's backpack(s)                                 | `array<Item>`    | No      |
+| trinket_1               | the player's first trinket                                                | `Item`           | Yes     |
+| trinket_2               | the player's second trinket                                               | `Item`           | Yes     |
+| destination             | the player's destination (if given a chase command)                       | `Position`       | No      |
+| has_reached_destination | whether or not the player has reached its chase destination               | `bool`           | No      |
+| spec                    | The player's deepest tree specialization- see [specs](api/enums/specs.md) | `number`         | No      |
+| party                   | the player's party number (i.e. the number in the raid panel)             | `number`         | No      |
+| movement_policy         | the player's [movement policy] (api/types/movement_policy.md) if any      | `MovementPolicy` | No      |
 
 ## Functions
 
@@ -33,14 +34,14 @@ some_bot:whisper(wow.master, "I'm alive!")
 
 | Function                 | Description                                                                                      | Parameters                                             | Return Type       | Tested? |
 | ------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------ | ----------------- | ------- |
-| follow                   | follow a unit                                                                                    | `Unit` _target_, `number` _distance_, `number` _angle_ | none              | Yes     |
 | stand                    | have the bot stand up                                                                            | none                                                   | none              | No      |
 | sit                      | have the bot sit down                                                                            | none                                                   | none              | No      |
 | dance                    | have the bot dance                                                                               | none                                                   | none              | No      |
 | kneel                    | have the bot kneel                                                                               | none                                                   | none              | No      |
 | interrupt                | stop casting/channeling                                                                          | none                                                   | none              | Yes     |
-| move                     | move to a position                                                                               | `(x, y, z)` or `Unit` or `Position`                    | none              | No      |
-| chase                    | chase a target- can be called again to update current chase                                      | `Unit` _target_, `number` distance, `number` angle     | none              | No      |
+| move                     | move to a position - sets a move [movement policy](api/types/movement_policy.md)                 | `(x, y)` or `Unit`                                     | none              | No      |
+| chase                    | chase a unit- - sets a chase [movement policy](api/types/movement_policy.md)                     | `Unit` _target_, `number` _distance_, `number` _angle_ | none              | No      |
+| follow                   | follow a unit - sets a follow [movement policy](api/types/movement_policy.md)                    | `Unit` _target_, `number` _distance_, `number` _angle_ | none              | Yes     |
 | teleport_to              | teleport to a unit                                                                               | `Unit` _target_                                        | none              | Yes     |
 | stop                     | stops the player from moving                                                                     | none                                                   | none              | No      |
 | reset_movement           | stops the player from moving and clears all movement tasks (i.e. follow, chase)                  | none                                                   | none              | No      |
